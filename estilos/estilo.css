@@ -1,0 +1,148 @@
+:root {
+  --color-header: #0F4C75;
+  --color-cuerpo:#1B262C;
+  --color-texto:#BBE1FA;
+  --texto-titulos:font-family: 'Alfa Slab One';
+  --parrafos:font-family: 'Alfa Slab One', cursive;
+  --z-fixed: 100;
+}
+body{
+    background: var(--color-cuerpo);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-header);
+  z-index: var(--z-fixed);
+  transition: 0.4s;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  font-weight: 600;
+}
+.nav__list {
+  justify-content: space-around;
+}
+.nav__name {
+  font-size: 0.625rem;
+}
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+.container__sobremi {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sobremi__texto {
+  width: 120%;
+  color: var(--color-texto);
+}
+.container__sobremi .texto_principal {
+  font-size: 6rem;
+  font-family: var(--texto-titulos);
+}
+.container__sobremi .descripcion {
+  font-size: 2rem;
+  display: inline;
+  font-family: var(--parrafos);
+}
+
+.imagen {
+  width: 50rem;
+  filter: drop-shadow(4px 6px 112px var(--color-texto));
+}
+
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-header);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 0rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: 0.4s;
+  }
+  .container__sobremi {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1,55%);
+    
+  }
+  .container__sobremi .texto_principal {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .sobremi__texto {
+    width: 100%;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    right: 4rem;
+  }
+  .nav__icon {
+    color: var(--color-texto);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav__icon {
+    display: none;
+  }
+  .nav {
+  }
+  .nav {
+    font-size: 0.938rem;
+  }
+}
+
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
