@@ -1,7 +1,8 @@
 :root {
-  --color-header: #0F4C75;
-  --color-cuerpo:#1B262C;
-  --color-texto:#BBE1FA;
+  --color-header: #fffffe;
+  --color-cuerpo:#2e97b0;
+  --color-texto:#fffffe;
+  --color-barra_abajo:#1162fc;
   --texto-titulos:font-family: 'Alfa Slab One';
   --parrafos:font-family: 'Alfa Slab One', cursive;
   --z-fixed: 100;
@@ -53,7 +54,37 @@ a {
 
 .container__sobremi {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); 
+}
+.container__sobremi .text{
+  position: relative;
+  color: var(--color-barra_abajo);
+  font-size: 40px;
+  font-weight: 600;
+}
+.container__sobremi .text.first-text{
+  color: var(--color-texto);
+}
+.text.sec-text:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cuerpo);
+  border-left: 2px solid white;
+  animation: animate 4s steps(12) infinite; 
+}
+
+@keyframes animate {
+  40%,60%{
+    left: 100%;
+  }
+  100%{
+    left: 0%;
+  }
+  
 }
 .sobremi__texto {
   width: 120%;
@@ -65,7 +96,8 @@ a {
 }
 .container__sobremi .descripcion {
   font-size: 2rem;
-  display: inline;
+  display: inline-block;
+  text-align: center;
   font-family: var(--parrafos);
 }
 
@@ -98,6 +130,7 @@ a {
   .container__sobremi {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1,55%);
+    overflow: hidden;
     
   }
   .container__sobremi .texto_principal {
@@ -117,8 +150,9 @@ a {
     right: 4rem;
   }
   .nav__icon {
-    color: var(--color-texto);
+    color: var(--color-cuerpo);
   }
+  
 }
 
 @media screen and (min-width: 767px) {
