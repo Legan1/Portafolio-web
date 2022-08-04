@@ -1,3 +1,5 @@
+
+//*writing */
 const text = document.querySelector(".sec-text")
 
 const textload =() =>{
