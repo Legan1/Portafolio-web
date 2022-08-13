@@ -26,6 +26,29 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="preloader">
+      <div class="spiner">
+        <div class="spiner">
+          <div class="spiner">
+            <div class="spiner">
+              <div class="spiner">
+
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <h3 class="texto"> Cargando</h3>
+        <p class="puntos">.....</p>
+      
+          
+      </div>
+    </div>
+    
+
+
+
+
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Luis</a>
@@ -55,17 +78,12 @@
 
             <li class="nav__item">
               <a href="" class="nav__link">
-                <i></i>
-                <span class="nav__name">Disenos AdobeXD</span>
+                <i class="icon ion-md-person nav__icon"></i>
+                <span class="nav__name">Acerca de mi</span>
               </a>
             </li>
 
-            <li class="nav__item">
-              <a href="" class="nav__link">
-                <i class="icon ion-md-apps nav__icon"></i>
-                <span class="nav__name">Contactame</span>
-              </a>
-            </li>
+           
           </ul>
         </div>
       </nav>
@@ -181,6 +199,133 @@
         </div>
       </div>
     </div>
+    <div class="lista">
+      <div class="categorias" id="categorias">
+        <a href="#" class="activo">Todos</a>
+				<a href="#">web</a>
+				<a href="#">Ciudades</a>
+				<a href="#">Personas</a>
+				<a href="#">Animales</a>
+      </div>
+
+      <section class="grid" id="grid">
+        <div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades autos carros calles"
+				 data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/ciudad1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/persona1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="web"
+				 data-etiquetas="Pagina web Portafolio-webs"
+				 data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/clima.png" alt="">
+				</div>
+			</div>
+
+      <div class="item"
+      data-categoria="web"
+      data-etiquetas="Pagina web Portafolio-web"
+      data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+   >
+     <div class="item-contenido">
+       <img src="img/clima.png" alt="">
+     </div>
+   </div>
+
+			<div class="item"
+				 data-categoria="animales"
+				 data-etiquetas="animales leones"
+				 data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/animal1.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="animales"
+				 data-etiquetas="animales pandas"
+				 data-descripcion="5.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/animal2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="6.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/persona2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="paisajes"
+				 data-etiquetas="paisajes montañas niebla"
+				 data-descripcion="7.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/paisaje2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades paisajes carreteras"
+				 data-descripcion="8.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="img/ciudad2.png" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="naturaleza"
+				 data-etiquetas="naturaleza hojas plantas"
+				 data-descripcion="9.- Lorem ipsum dolor sit amet consectetur.
+				 	"
+			>
+				<div class="item-contenido">
+					<img src="img/naturaleza1.png" alt="">
+				</div>
+			</div>
+      </section>
+  
+      <section class="overlay" id="overlay">
+        <div class="contenedor-img">
+          <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+          <img src="img/Imagen de ejemplo." alt="">
+        </div>
+        <p class="descripcion"></p>
+      </section>
+
+
+
+
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
   <script src="script/app.js"></script>
+
 </html>

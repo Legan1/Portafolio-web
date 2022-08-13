@@ -1,15 +1,78 @@
 :root {
-  --color-header: #fffffe;
-  --color-cuerpo:#2e97b0;
-  --color-texto:#fffffe;
-  --color-barra_abajo:#1162fc;
+  --color-header: #424c8d;
+  --color-cuerpo:#0c0e1b  ;
+  --color-texto:#afc0e5;
+  --inicio:#326cf8;
+  --color-barra_abajo:#424c8d  ;
   --texto-titulos:font-family: 'Alfa Slab One';
   --parrafos:font-family: 'Alfa Slab One', cursive;
   --z-fixed: 100;
 }
 body{
     background: var(--color-cuerpo);
+    
 }
+/*Preloader*/
+.preloader{
+  width: 100%;
+  height: 100%;
+  background:var(--color-cuerpo);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+
+}
+.spiner{
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid var(--color-texto);
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 18px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+}
+.spiner > div{
+
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  animation: spin 5s linear infinite;
+}
+.texto{
+  z-index: 999;
+  background-color: ;
+  color: #fffffe;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 7rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+.puntos{
+  z-index: 999;
+  color: #fffffe;
+  position: absolute;
+  top: 8rem;
+  left: 1.5rem;
+  font-size: 3rem;
+}
+
+@keyframes spin {
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/**/
 .header {
   position: fixed;
   top: 0;
@@ -34,6 +97,7 @@ a {
 .nav__list,
 .nav__link {
   display: flex;
+  gap: 4rem;
 }
 
 .nav__link {
@@ -45,12 +109,15 @@ a {
 .nav__list {
   justify-content: space-around;
 }
+
 .nav__name {
   font-size: 0.625rem;
+  color: var(--color-texto);
 }
 .nav__icon {
   font-size: 1.5rem;
 }
+
 
 .container__sobremi {
   display: grid;
@@ -63,7 +130,7 @@ a {
   font-weight: 600;
 }
 .container__sobremi .text.first-text{
-  color: var(--color-texto);
+  color: var(--inicio);
 }
 .text.sec-text:before{
   content: "";
@@ -104,7 +171,7 @@ a {
 }
 
 .imagen {
-  width: 50rem;
+  width: 55rem;
   filter: drop-shadow(4px 6px 112px var(--color-texto));
 }
 .servicios{
@@ -148,9 +215,97 @@ a {
   color: var(--color-barra_abajo);
 }
 .descripcion{
-  color: var(--color-cuerpo);
+  color: var(--color-texto);
 }
 
+/**/
+.lista .categorias{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.lista .categorias a{
+  color: var(--color-texto);
+  margin: 10px 20px;
+  font-size: 18px;
+}
+.lista .categorias a.activo{
+  color: red;
+}
+
+.grid {
+	position: relative;
+	width: 100%;
+  opacity: 1;
+  transition: opacity 0.5 linear 1s;
+
+}
+.grid.imagenes-cargadas{
+  opacity: 1;
+}
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(33.333333% - 20px);
+}
+
+
+.grid .item img{
+  width: 100%;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  z-index: 999;
+}
+.overlay.activo{
+  display: flex;
+}
+
+
+.overlay img {
+	max-width: 100%;
+}
+
+.overlay .descripcion {
+	display: block;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 10px;
+	max-width: 50%;
+}
+
+.contenedor-img{
+  position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
 
 @media screen and (max-width: 320px) {
   .nav__name {
@@ -196,7 +351,10 @@ a {
     right: 4rem;
   }
   .nav__icon {
-    color: var(--color-cuerpo);
+    color: var(--color-texto);
+  }
+  .nav__list,.nav__link{
+    gap: 0;
   }
   .container__sobremi .text {
     font-size: 2rem;
@@ -208,14 +366,16 @@ a {
   .grid_servicios{
     grid-template-columns: repeat(1,1fr);
   }
+  .grid .item {
+    width: calc(50% -20px);
+  }
 }
 
 @media screen and (min-width: 767px) {
   .nav__icon {
     display: none;
   }
-  .nav {
-  }
+
   .nav {
     font-size: 0.938rem;
   }
@@ -234,4 +394,5 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+ 
 }
