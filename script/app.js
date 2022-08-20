@@ -18,6 +18,7 @@ setInterval(textload,12000);
 
 /**Preloader */
 
+
 window.addEventListener("load",()=>{
 
     setTimeout(() => {

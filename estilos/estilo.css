@@ -1,9 +1,9 @@
 :root {
-  --color-header: #424c8d;
-  --color-cuerpo:#0c0e1b  ;
-  --color-texto:#afc0e5;
+  --color-header:#C4D7E0;
+  --color-cuerpo:#6E85B7 ;
+  --color-texto:#B2C8DF;
   --inicio:#326cf8;
-  --color-barra_abajo:#424c8d  ;
+  --color-barra_abajo:#F8F9D7;
   --texto-titulos:font-family: 'Alfa Slab One';
   --parrafos:font-family: 'Alfa Slab One', cursive;
   --z-fixed: 100;
@@ -23,54 +23,56 @@ body{
   z-index: 999;
 
 }
-.spiner{
-  width: 100px;
-  height: 100px;
-  border-top: 5px solid var(--color-texto);
-  border-right: 5px solid transparent;
-  border-radius: 50%;
-  position: absolute;
-  left: 3px;
-  top: 18px;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  z-index: 999;
-}
-.spiner > div{
+.loader {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  display: block;
+  margin: -50px auto 0;
+  position: relative;
 
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  animation: spin 5s linear infinite;
+  color: #FFF;
+  transform: translateY(32rem);
+  box-sizing: border-box;
+  animation: animloader 2s ease infinite;
 }
-.texto{
-  z-index: 999;
-  background-color: ;
-  color: #fffffe;
-  width: 100px;
-  height: 70px;
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  color: #FFF;
   position: absolute;
-  top: 7rem;
-  right: 1rem;
-  font-size: 2rem;
+  left: 30px;
+
+  animation: animloader 2s 0.2s ease infinite;
 }
-.puntos{
-  z-index: 999;
-  color: #fffffe;
-  position: absolute;
-  top: 8rem;
-  left: 1.5rem;
-  font-size: 3rem;
+.loader::before {
+  animation-delay: 0.4s;
+  left: 60px;
 }
 
-@keyframes spin {
-  100%{
-    transform: rotate(360deg);
+@keyframes animloader {
+  0% {
+    top: 0;
+    color: white;
   }
-
+  50% {
+    top: 30px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    top: 0;
+    color: white;
+  }
 }
-
+    
 
 /**/
 .header {
@@ -94,6 +96,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.nav__logo{
+  color: var(--color-cuerpo);
+}
 .nav__list,
 .nav__link {
   display: flex;
@@ -112,7 +117,7 @@ a {
 
 .nav__name {
   font-size: 0.625rem;
-  color: var(--color-texto);
+  color:var(--color-cuerpo);
 }
 .nav__icon {
   font-size: 1.5rem;
@@ -193,12 +198,12 @@ a {
   text-align: center;
 }
 .service-item .service-item-inner:hover{
-  background: var(--color-texto);
+
 }
 .service-item-inner .icon{
   height:3.75rem;
   width: 3.75rem;
-  background: rebeccapurple;
+  background: var(--color-barra_abajo);
   margin: 0 auto 1.875rem;
   font-size: 1.75rem;
   color: var(--color-texto);
@@ -210,12 +215,13 @@ a {
 }
 .service-item .icon i{
   line-height: 3.75rem;
+  font-size: 3rem;
 }
 .Titulo{
   color: var(--color-barra_abajo);
 }
 .descripcion{
-  color: var(--color-texto);
+  color:var(--color-barra_abajo);
 }
 
 /**/
@@ -230,7 +236,7 @@ a {
   font-size: 18px;
 }
 .lista .categorias a.activo{
-  color: red;
+  color:var(--color-header);
 }
 
 .grid {
@@ -313,7 +319,15 @@ a {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
+  .loader {
+    left: -2rem;
+    transform: translateY(20rem);
+
+   
+  }
+
+
   .nav__menu {
     position: fixed;
     bottom: 0;
@@ -342,6 +356,9 @@ a {
     width: 100%;
     grid-row-start: 2;
     grid-row-end: 2;
+
+    margin-top: 2rem;
+    margin-left: 0rem;
   }
 
   .imagen {
@@ -351,7 +368,7 @@ a {
     right: 4rem;
   }
   .nav__icon {
-    color: var(--color-texto);
+    color: var(--color-cuerpo);
   }
   .nav__list,.nav__link{
     gap: 0;
@@ -366,27 +383,26 @@ a {
   .grid_servicios{
     grid-template-columns: repeat(1,1fr);
   }
-  .grid .item {
-    width: calc(50% -20px);
+  .grid .item{
+    width: calc(28%);
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .nav__icon {
     display: none;
   }
-
+  
+  
   .nav {
-    font-size: 0.938rem;
+      font-size: 0.938rem;
+    }
   }
-}
 
+
+  
 /* Remove if you choose, the minimalist design */
-@media screen and (max-width: 320px) {
-  .nav__name {
-    display: none;
-  }
-}
+
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
@@ -394,5 +410,7 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+
+  
  
 }
