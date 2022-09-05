@@ -1,8 +1,8 @@
 :root {
   --color-header:#C4D7E0;
-  --color-cuerpo:#6E85B7 ;
-  --color-texto:#B2C8DF;
-  --inicio:#326cf8;
+  --color-cuerpo:#115173;
+  --color-texto:#053F5E;
+  --inicio:#FFD700;
   --color-barra_abajo:#F8F9D7;
   --texto-titulos:font-family: 'Alfa Slab One';
   --parrafos:font-family: 'Alfa Slab One', cursive;
@@ -10,7 +10,7 @@
 }
 body{
     background: var(--color-cuerpo);
-    
+    scroll-behavior:smooth;
 }
 /*Preloader*/
 .preloader{
@@ -33,7 +33,7 @@ body{
   margin: -50px auto 0;
   position: relative;
 
-  color: #FFF;
+  color:var(--color-texto);
   transform: translateY(32rem);
   box-sizing: border-box;
   animation: animloader 2s ease infinite;
@@ -161,15 +161,23 @@ a {
   font-family: var(--texto-titulos);
 }
 .container__sobremi .descripcion {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: inline-block;
-  text-align: justify;
+  text-align: center;
   font-family: var(--parrafos);
 }
 .descripcion_centro{
   text-align: center;
   font-size: 2rem;
   font-family: var(--parrafos);
+  
+}
+
+.circulo{
+  width: 100%;
+  height: 20rem;
+  border-radius: 50%;
+  background: #C4D7E0;
 }
 
 .imagen {
@@ -206,8 +214,7 @@ a {
   color: var(--color-texto);
   border-radius: 1.25rem;
   border-bottom-right-radius: 0;
-  position: relative;
-  z-index: 1;
+
   transition: all 0.3s ease;
 }
 .service-item .icon i{
@@ -219,6 +226,7 @@ a {
 }
 .descripcion{
   color:var(--color-barra_abajo);
+  line-height: 1.5;
 }
 
 /**/
@@ -336,6 +344,9 @@ a {
     font-size: 1.5rem;
     text-align: center;
   }
+  .descripcion__titulo{
+    color: #fff;
+  }
   .sobremi__texto {
     width: 100%;
     grid-row-start: 2;
@@ -351,6 +362,13 @@ a {
     position: relative;
     right: 4rem;
   }
+  .descripcion__titulo-descipcion{
+    margin: -1rem;
+    line-height: 1.5;
+    display: inline-block;
+    margin-top: 0rem;
+    color: var(--color-texto);
+  }
   .nav__icon {
     color: var(--color-cuerpo);
   }
@@ -362,7 +380,7 @@ a {
   }
   .sobremi__texto{
     margin-top: 0rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
   } 
   .grid_servicios{
     grid-template-columns: repeat(1,1fr);
