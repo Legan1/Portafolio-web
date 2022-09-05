@@ -24,10 +24,11 @@ window.addEventListener("load",()=>{
     setTimeout(() => {
         const preloader = document.querySelector('.preloader');
         preloader.style.display = "none"
-    },4000 );
+    },2000 );
    
   
 })
+
 
 const grid = new Muuri('.grid', {
 	layout: {
