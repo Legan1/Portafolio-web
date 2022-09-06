@@ -1,9 +1,8 @@
 :root {
   --color-header:#C4D7E0;
   --color-cuerpo:#115173;
-  --color-texto:#053F5E;
+  --color-texto:#fff;
   --inicio:#FFD700;
-  --color-barra_abajo:#F8F9D7;
   --texto-titulos:font-family: 'Alfa Slab One';
   --parrafos:font-family: 'Alfa Slab One', cursive;
   --z-fixed: 100;
@@ -109,7 +108,7 @@ a {
 
 .nav__name {
   font-size: 0.625rem;
-  color:var(--color-cuerpo);
+  color:var(--color-texto);
 }
 .nav__icon {
   font-size: 1.5rem;
@@ -173,16 +172,9 @@ a {
   
 }
 
-.circulo{
-  width: 100%;
-  height: 20rem;
-  border-radius: 50%;
-  background: #C4D7E0;
-}
-
 .imagen {
   width: 55rem;
-  filter: drop-shadow(4px 6px 112px var(--color-texto));
+
 }
 .servicios{
   text-align: center;
@@ -211,7 +203,8 @@ a {
   background: var(--color-barra_abajo);
   margin: 0 auto 1.875rem;
   font-size: 1.75rem;
-  color: var(--color-texto);
+  background: var(--color-header);
+  color: var(--color-cuerpo);
   border-radius: 1.25rem;
   border-bottom-right-radius: 0;
 
@@ -295,7 +288,7 @@ a {
 
 .overlay .descripcion {
 	display: block;
-	background: #fff;
+	background: ;
 	padding: 20px;
 	text-align: center;
 	margin-top: 5px;
@@ -338,6 +331,19 @@ a {
     z-index: 2;
  
   }
+  .container_imagen{
+    position: relative;
+  }
+  .circulo{
+    width: 71%;
+    height: 16rem;
+    background: var(--color-header);
+    border-radius: 50%;
+    position: absolute;
+    top: 0rem;
+    left: 3rem;
+  }
+
   .container__sobremi {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1,55%);
@@ -349,7 +355,7 @@ a {
     text-align: center;
   }
   .descripcion__titulo{
-    color: #fff;
+    color:var(--color-texto);
   }
   .sobremi__texto {
     width: 100%;
@@ -361,10 +367,11 @@ a {
   }
 
   .imagen {
-    width: 100%;
+    width: 200%;
     height: 20rem;
     position: relative;
-    right: 4rem;
+    left: -12rem;
+    top: -3rem;
   }
   .descripcion__titulo-descipcion{
     margin: -1rem;
@@ -374,7 +381,7 @@ a {
     color: var(--color-texto);
   }
   .nav__icon {
-    color: var(--color-cuerpo);
+    color: var(--color-texto);
   }
   .nav__list,.nav__link{
     gap: 0;
