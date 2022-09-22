@@ -13,7 +13,6 @@
     --container-color:#EEEEEE;
   
     /*========== Font and typography ==========*/
-    --body-font: 'Open Sans', sans-serif;
     --h1-font-size: 1.5rem;
     --normal-font-size: .938rem;
     --tiny-font-size: .625rem;
@@ -185,14 +184,18 @@
     box-shadow: 8px 10px 16px -7px rgb(238,238,238);
 }
 .service-item-inner .icon {
-    height: 3.75rem;
-    width: 3.75rem;
     color: var(--container-color);
     margin: 0 auto 1.875rem;
     font-size: 1.75rem;
  
     border-radius: 1.25rem;
     border-bottom-right-radius: 0;
+}
+.Service_titulo{
+  line-height: 2;
+}
+.Service_descripcion-titulo{
+  padding-bottom: 1rem;
 }
 
 /**/
