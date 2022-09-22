@@ -5,76 +5,66 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="estilos/normalice.css" />
-  <link rel="stylesheet" href="estilos/estilo.css" />
-
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="estilos/estilo.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <title>Document</title>
 </head>
 
 <body>
-  
+
   <div class="preloader">
     <span class="loader"></span>
-
   </div>
-
-
-
-
-
-
-
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">Luis</a>
+        <a href="#" class="nav__logo">Marlon</a>
 
-      <div class="nav__menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="" class="nav__link">
-              <i class="icon ion-md-home nav__icon"></i>
-              <span class="nav__name">Home</span>
-            </a>
-          </li>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">
+                        <i class='bx bx-home-alt nav__icon'></i>
+                        <span class="nav__name">Home</span>
+                    </a>
+                </li>
+                
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__name">About</span>
+                    </a>
+                </li>
 
-          <li class="nav__item">
-            <a href="" class="nav__link">
-              <i class="icon ion-md-briefcase nav__icon"></i>
-              <span class="nav__name">Portafolio</span>
-            </a>
-          </li>
+                <li class="nav__item">
+                    <a href="#skills" class="nav__link">
+                        <i class='bx bx-book-alt nav__icon'></i>
+                        <span class="nav__name">Skills</span>
+                    </a>
+                </li>
 
-          <li class="nav__item">
-            <a href="" class="nav__link">
-              <i class="icon ion-md-person nav__icon"></i>
-              <span class="nav__name">Acerca de mi</span>
-            </a>
-          </li>
+                <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">
+                        <i class='bx bx-briefcase-alt nav__icon'></i>
+                        <span class="nav__name">Portfolio</span>
+                    </a>
+                </li>
 
-          <li class="nav__item">
-            <a href="" class="nav__link">
-              <i class="icon ion-md-person nav__icon"></i>
-              <span class="nav__name" id="service-item">Mis servicios</span>
-            </a>
-          </li>
+                <li class="nav__item">
+                    <a href="#contactme" class="nav__link">
+                        <i class='bx bx-message-square-detail nav__icon'></i>
+                        <span class="nav__name">Contactme</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-
-        </ul>
-      </div>
+        <img src="assets/img/perfil.png" alt="" class="nav__img">
     </nav>
-  </header>
-
+</header>
   <main>
     <section>
-      <div class="container__sobremi" data-aos="fade-down" data-aos-delay="1000"
-      data-aos-duration="8000" >
+      <div class="container__sobremi">
         <div class="sobremi__texto">
           <span class="text first-text">Hola soy</span>
           <span class="text sec-text">Luis</span>
@@ -83,43 +73,40 @@
             todas sus necesidades comerciales o personales.
             <br>
             Mi trabajo no es solo crear el sitio, sino también proporcionar asesoramiento sobre usabilidad y diseño <br>
-          <div class="descripcion_centro">
+
+            
+ <div class="descripcion_centro">
             Trabajemos juntos con la creación de tu página a partir de tus necesidades...
           </div>
+        
+
 
           </p>
         </div>
-        <div class="container_imagen">
-          <span class="circulo">
-            <img src="img/Imagen de ejemplo.png" class="imagen" alt="" />
-          </span>
-           
-
-     
+        <div class="imagen">
+          <svg class="home" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffff" d="M50.3,-40.9C63.9,-23,72.8,-2.2,68.2,14.5C63.5,31.2,45.3,43.7,26.2,51.9C7.2,60.1,-12.7,63.9,-30.7,57.6C-48.7,51.3,-64.7,34.9,-66.9,17.5C-69,0.2,-57.3,-18.1,-43.8,-35.9C-30.4,-53.7,-15.2,-71.2,1.6,-72.4C18.3,-73.7,36.7,-58.8,50.3,-40.9Z" transform="translate(100 100)" />
+          </svg>
         </div>
       </div>
     </section>
   </main>
+
   <h2 class="servicios">Mis servicios</h2>
-  <div class="grid_servicios" >
+  <div class="grid_servicios">
     <div class="service-item">
       <div class="service-item-inner" data-aos="zoom-in" data-aos-duration="3000">
         <div class="icon">
-          <i class="icon ion-md-phone-portrait"></i>
+          <i class='bx bx-mobile-alt'></i>
         </div>
-        <h3 class="Titulo">Diseños responsible</h3>
-        <p class="descripcion__titulo">
+        <h3 class="Service_titulo">Diseños responsible</h3>
+        <p class="Service_descripcion-titulo">
           ¿Cansado que tu página no se puede adaptar a dispositivos moviles?
-          <p class="descripcion__titulo-descipcion">
-            Uno de mis principales servicios es adaptar
-            tu sitio a diferentes dispositivos moviles.
-            <br>
-            Con mi consultoría, mejorarás la experiencia de usuario de tus clientes en sus smartphones, tablets y
-            cualquier dispositivo móvil que esté detrás de ellos. Así podrán interactuar con tu producto/servicio con
-            total comodidad desde su dispositivo móvil.
-          </p>
-         
-
+        </p>
+        <p class="descripcion__titulo-descipcion">
+          Puedo ayudarte a optimizar tu página web para que aparezca en los primeros lugares al momento que te buscan a
+          través del internet, Con mi ayuda todo es posible
+        </p>
         </p>
       </div>
     </div>
@@ -129,146 +116,113 @@
     <div class="service-item" data-aos="zoom-in" data-aos-duration="3000">
       <div class="service-item-inner">
         <div class="icon">
-          <i class="icon ion-md-color-palette"></i>
+          <i class='bx bxs-palette'></i>
         </div>
-        <h3 class="Titulo">Diseños con Adobe XD </h3>
-        <p class="descripcion__titulo-descipcion">
-          Crear prototipos es un servicio que realizo durante mi actividad profesional como diseñador y programador. <br> El
-          programa Adobe XD  permite realizar prototipos para comprender los conceptos del cliente y definir qué
-          funcionalidades se necesitan incluir en el diseño final.
+        <h3 class="Service_titulo">Adobe XD</h3>
+        <p class="Service_descripcion-titulo">
+          ¿Cansado que tu página no se puede adaptar a dispositivos moviles?
         </p>
+        <p class="descripcion__titulo-descipcion">
+          Puedo ayudarte a optimizar tu página web para que aparezca en los primeros lugares al momento que te buscan a
+          través del internet, Con mi ayuda todo es posible
+        </p>
+
       </div>
     </div>
 
     <div class="service-item" data-aos="zoom-in" data-aos-duration="3000">
       <div class="service-item-inner">
         <div class="icon">
-          <i class="gg-pen"></i>
+          <i class='bx bxs-search-alt-2' ></i>
         </div>
-        <h3 class="Titulo">CopyWritting</h3>
-        <p class="descripcion__titulo-descipcion">
-          Otro servicio es la escritura persuasiva que convenzan a los clientes potenciales para que compren o adquieran su producto o servicio a través de textos persuasivos.
+        <h3 class="Service_titulo">Seo</h3>
+        <p class="Service_descripcion-titulo">
+          ¿Cansado que tu página no se puede adaptar a dispositivos moviles?
         </p>
+        <p class="descripcion__titulo-descipcion">
+          Puedo ayudarte a optimizar tu página web para que aparezca en los primeros lugares al momento que te buscan a
+          través del internet, Con mi ayuda todo es posible
+        </p>
+
       </div>
     </div>
 
     <div class="service-item">
       <div class="service-item-inner" data-aos="zoom-in" data-aos-duration="3000">
         <div class="icon">
-          <i class="icon ion-md-logo-wordpress"></i>
+          <i class='bx bxs-pencil' ></i>
         </div>
-        <h3 class="Titulo">Seo</h3>
-        <p class="descripcion__titulo">
+        <h3 class="Service_titulo">coppy</h3>
+        <p class="Service_descripcion-titulo">
           ¿Cansado que tu página no se puede adaptar a dispositivos moviles?
-          <p class="descripcion__titulo-descipcion">
-           Puedo ayudarte a optimizar tu página web para que aparezca en los primeros lugares al momento que te buscan a través del internet, Con mi ayuda todo es posible
-          </p>
-         
+        </p>
+        <p class="descripcion__titulo-descipcion">
+          Otro servicio es la escritura persuasiva que convenzan a los clientes potenciales para que compren o adquieran
+          su producto o servicio a través de textos persuasivos.
+        </p>
+
 
       </div>
     </div>
   </div>
-  <div class="lista">
-    <div class="categorias" id="categorias">
-      <a href="#" class="activo">Todos</a>
-      <a href="#">web</a>
-      <a href="#">Ciudades</a>
-      <a href="#">Personas</a>
-      <a href="#">Animales</a>
+
+
+
+</div>
+
+<footer>
+  <h4>Contactame</h4>
+  <div class="contacto contacto_grid">
+    <div class="redes">
+      <a href="">      <img src="img/twitter.svg" class="red" alt="">
+  
+      </a>
     </div>
 
-    <section class="grid" id="grid">
-      <div class="item" data-categoria="ciudades" data-etiquetas="ciudades autos carros calles"
-        data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/ciudad1.png" alt="">
-        </div>
-      </div>
+    <div class="redes">
+      <a href="">   <img src="img/facebook.svg" class="red" alt="">
 
-      <div class="item" data-categoria="personas" data-etiquetas="personas mujeres"
-        data-descripcion="2.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/persona1.png" alt="">
-        </div>
-      </div>
+       
+      </a>
+   
+      
+    </div>
 
-      <div class="item" data-categoria="web" data-etiquetas="Pagina web Portafolio-webs"
-        data-descripcion="3.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/clima.png" alt="">
-        </div>
-      </div>
+    <div class="redes">
+      <a href="">      <img src="img/instagram.svg" class="red" alt="">
 
-      <div class="item" data-categoria="web" data-etiquetas="Pagina web Portafolio-web"
-        data-descripcion="3.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/clima.png" alt="">
-        </div>
-      </div>
+      </a>
 
-      <div class="item" data-categoria="animales" data-etiquetas="animales leones"
-        data-descripcion="4.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/animal1.png" alt="">
-        </div>
-      </div>
+    
+    </div>
 
-      <div class="item" data-categoria="animales" data-etiquetas="animales pandas"
-        data-descripcion="5.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/animal2.png" alt="">
-        </div>
-      </div>
+  </div>
+</footer>
 
-      <div class="item" data-categoria="personas" data-etiquetas="personas mujeres"
-        data-descripcion="6.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/persona2.png" alt="">
-        </div>
-      </div>
 
-      <div class="item" data-categoria="paisajes" data-etiquetas="paisajes montañas niebla"
-        data-descripcion="7.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/paisaje2.png" alt="">
-        </div>
-      </div>
 
-      <div class="item" data-categoria="ciudades" data-etiquetas="ciudades paisajes carreteras"
-        data-descripcion="8.- Lorem ipsum dolor sit amet consectetur.">
-        <div class="item-contenido">
-          <img src="img/ciudad2.png" alt="">
-        </div>
-      </div>
 
-      <div class="item" data-categoria="naturaleza" data-etiquetas="naturaleza hojas plantas" data-descripcion="9.- Lorem ipsum dolor sit amet consectetur.
-				 	">
-        <div class="item-contenido">
-          <img src="img/naturaleza1.png" alt="">
-        </div>
+  <!--
+ </div>
+    <footer>
+      <div class="redes">
+        <h4>Contacto</h4>
+        <ul class="red">
+          <li><i class='bx bxl-facebook-square'></i></li>
+          <li><i class='bx bxl-instagram-alt'  ></i></li>
+          <li><i class='bx bxl-twitter'  ></i></li>
+        </ul>
       </div>
-    </section>
-
-    <section class="overlay" id="overlay">
-      <div class="contenedor-img">
-        <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
-        <img src="img/Imagen de ejemplo." alt="">
-      </div>
-      <p class="descripcion"></p>
-    </section>
-
+    </footer>
+-->
 
 
 
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+
 <script src="script/app.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
 
 
 </html>
