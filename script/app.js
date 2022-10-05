@@ -35,10 +35,10 @@ const text = document.querySelector(".sec-text")
 
 const textload =() =>{
     setTimeout(() => {
-        text.textContent=''
+        text.textContent='Freelancer'
     }, 0);
     setTimeout(() => {
-        text.textContent='diseñador'
+        text.textContent='diseñador web'
     }, 4000);
     setTimeout(() => {
         text.textContent='copywriting'
